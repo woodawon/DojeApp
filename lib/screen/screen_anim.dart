@@ -1,10 +1,11 @@
-// ignore_for_file: prefer_const_constructors, unused_local_variable, library_private_types_in_public_api, use_key_in_widget_constructors, unused_field, prefer_final_fields, must_be_immutable, sized_box_for_whitespace, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, unused_local_variable, library_private_types_in_public_api, use_key_in_widget_constructors, unused_field, prefer_final_fields, must_be_immutable, sized_box_for_whitespace, sort_child_properties_last, no_leading_underscores_for_local_identifiers
 
-import 'package:dojeapp/screen/screen_result.dart';
+import 'package:dojeapp/widget/widget_candidate.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_swiper_3/flutter_swiper_3.dart';
 import 'package:dojeapp/model/model_anim.dart';
+import 'package:dojeapp/lottie/lottie_popheart.dart';
 
 class AnimScreen extends StatefulWidget {
   List<Anim> anims;
@@ -91,7 +92,9 @@ class _AnimScreenState extends State<AnimScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ,
+                        builder: (context) => LottieTest(
+                          answerState: _answerState,
+                        )
                       ),
                     );
                   },
@@ -107,7 +110,24 @@ class _AnimScreenState extends State<AnimScreen> {
   List<Widget> _buildCandidates(double width, Anim anim) {
     List<Widget> _children = [];
     for(int i = 0; i < 7; i++) {
-
+      _children.add(
+        CandWidget(
+          index: i,
+          text: anim.value[i],
+          width: width,
+          answerState: _answerState[i],
+          tap: () {
+            setState(() {
+              _answerState[i] = true;
+            });
+          },
+        ),
+      );
+      _children.add(
+        Padding(
+          padding: EdgeInsets.all(width * 0.024),
+        ),
+      );
     }
     return _children;
   }

@@ -1,8 +1,11 @@
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class LottieTest extends StatefulWidget {
-  const LottieTest({super.key});
+  List<bool> answerState;
+  LottieTest({required this.answerState});
   @override
   State<LottieTest> createState() => _LottieTestState();
 }

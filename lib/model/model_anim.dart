@@ -1,6 +1,6 @@
 class Anim {
   String title;
-  List<int> value;
+  List<String> value;
 
   Anim({required this.title, required this.value});
   Anim.fromMap(Map<String, dynamic> map)
