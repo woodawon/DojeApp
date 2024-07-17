@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unused_field, prefer_final_fields, prefer_interpolation_to_compose_strings
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unused_field, prefer_final_fields, prefer_interpolation_to_compose_strings, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

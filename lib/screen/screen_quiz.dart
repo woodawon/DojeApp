@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, library_private_types_in_public_api, unused_field, prefer_final_fields, prefer_const_constructors, prefer_interpolation_to_compose_strings, sort_child_properties_last, no_leading_underscores_for_local_identifiers, avoid_unnecessary_containers, sized_box_for_whitespace
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, library_private_types_in_public_api, unused_field, prefer_final_fields, prefer_const_constructors, prefer_interpolation_to_compose_strings, sort_child_properties_last, no_leading_underscores_for_local_identifiers, avoid_unnecessary_containers, sized_box_for_whitespace, avoid_print
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_swiper_3/flutter_swiper_3.dart';
@@ -15,7 +15,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  List<int> _answers = [-1, -1, -1];
+  List<int> _answers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
   List<bool> _answerState = [false, false, false, false];
   int _currentIndex = 0;
   SwiperController _controller = SwiperController();
@@ -133,7 +133,7 @@ class _QuizScreenState extends State<QuizScreen> {
   
   List<Widget> _buildCandidates(double width, Quiz quiz) {
     List<Widget> _children = [];
-    for(int i = 0; i < 4; i++) {
+    for(int i = 0; i < 10; i++) {
       _children.add(
         CandWidget(
           index: i,
@@ -142,7 +142,7 @@ class _QuizScreenState extends State<QuizScreen> {
           answerState: _answerState[i],
           tap: () {
             setState(() {
-              for(int j = 0; j < 4; j++) {
+              for(int j = 0; j < 10; j++) {
                 if(j == i) {
                   _answerState[j] = true;
                   _answers[_currentIndex] = j;

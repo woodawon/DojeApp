@@ -16,54 +16,54 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Quiz> quizs = [
     Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
+      'title' : '자바의 출력 장치에 해당하는 것은?',
+      'candidates' : ['println()', 'cook()', 'pupu()', 'spring()'],
       'answer' : 0
     }),
     Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
+      'title' : '반복문이란?',
+      'candidates' : ['특정 구조의 반복', '새로고침', '오류', '게임'],
       'answer' : 0
     }),
     Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
+      'title' : '연산자의 종류가 아닌 것은?',
+      'candidates' : ['비교', '산술', '논쟁', '대입'],
+      'answer' : 2
+    }),
+    Quiz.fromMap({
+      'title' : '자료형이 아닌 것은?',
+      'candidates' : ['int', 'String', 'frame', 'double'],
+      'answer' : 2
+    }),
+    Quiz.fromMap({
+      'title' : '함수 선언 방식으로 옳은 것은?',
+      'candidates' : ['*mtd*;', 'mtd();', 'mtd[];', 'mtd{};'],
+      'answer' : 1
+    }),
+    Quiz.fromMap({
+      'title' : '클라이언트의 요청 정보를 저장하는 내장 객체는?',
+      'candidates' : ['response(응답)', 'animal(동물)', 'present(선물)', 'request(요청)'],
+      'answer' : 3
+    }),
+    Quiz.fromMap({
+      'title' : '숫자 1과 같은 뜻을 가지는 boolean 값은?',
+      'candidates' : ['true', 'tree', 'boolone', 'onelean'],
       'answer' : 0
     }),
     Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
+      'title' : '예외가 발생한 경우 사용하는 내장객체는?',
+      'candidates' : ['error', 'isEnd', 'exception', 'other'],
+      'answer' : 2
+    }),
+    Quiz.fromMap({
+      'title' : 'SQL에서 테이블을 만드는 DDL 명령어는?',
+      'candidates' : ['CREATE(생성)', 'ALTER(변경)', 'DROP(삭제)', 'ADD(추가)'],
       'answer' : 0
     }),
     Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
-    }),
-    Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
-    }),
-    Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
-    }),
-    Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
-    }),
-    Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
-    }),
-    Quiz.fromMap({
-      'title' : 'test',
-      'candidates' : ['a', 'b', 'c', 'd'],
-      'answer' : 0
+      'title' : 'SQL에서 정보를 검색하는 DML 명령어는?',
+      'candidates' : ['SEARCH(검색)', 'INSERT(추가)', 'DELETE(삭제)', 'SELECT(검색)'],
+      'answer' : 3
     }),
   ];
 
