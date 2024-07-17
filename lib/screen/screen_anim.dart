@@ -31,7 +31,7 @@ class _AnimScreenState extends State<AnimScreen> {
         body: Center(
           child: Container(
             width: width * 0.85,
-            height: height * 0.5,
+            height: height * 0.68,
             child: Swiper(
               controller: _controller,
               loop: false,
@@ -56,6 +56,9 @@ class _AnimScreenState extends State<AnimScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          Padding(
+            padding: EdgeInsets.all(width * 0.024),
+          ),
           Container(
             width: width * 0.8,
             padding: EdgeInsets.only(top : width * 0.012),
@@ -118,7 +121,13 @@ class _AnimScreenState extends State<AnimScreen> {
           answerState: _answerState[i],
           tap: () {
             setState(() {
-              _answerState[i] = true;
+              for(int j = 0; j < 7; j++) {
+                if(j == i) {
+                  _answerState[j] = true;
+                } else {
+                  _answerState[j] = false;
+                }
+              }
             });
           },
         ),
