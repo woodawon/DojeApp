@@ -15,7 +15,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  List<int> _answers = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+  List<int> _answers = [-1, -1, -1];
   List<bool> _answerState = [false, false, false, false];
   int _currentIndex = 0;
   SwiperController _controller = SwiperController();
@@ -133,7 +133,7 @@ class _QuizScreenState extends State<QuizScreen> {
   
   List<Widget> _buildCandidates(double width, Quiz quiz) {
     List<Widget> _children = [];
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 4; i++) {
       _children.add(
         CandWidget(
           index: i,
@@ -142,7 +142,7 @@ class _QuizScreenState extends State<QuizScreen> {
           answerState: _answerState[i],
           tap: () {
             setState(() {
-              for(int j = 0; j < 10; j++) {
+              for(int j = 0; j < 4; j++) {
                 if(j == i) {
                   _answerState[j] = true;
                   _answers[_currentIndex] = j;
