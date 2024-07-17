@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Anim> anims = [
     Anim.fromMap({
       'title' : '원하시는 캐릭터를 선택해주세요.',
-      'value' : ['팡하트', '하트', '찐핑', '연핑', '망치', '요가', '꼬부기']
+      'value' : ['팡하트', '여우', '찐핑', '연핑', '망치', '요가', '꼬부기']
     }),
   ];
 

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:dojeapp/screen/screen_lottie_result.dart';
 
 class LottieTest extends StatefulWidget {
   List<bool> answerState;
@@ -11,12 +12,12 @@ class LottieTest extends StatefulWidget {
 }
 
 class _LottieTestState extends State<LottieTest> with TickerProviderStateMixin {
-
   late final AnimationController _lottieController;
   double _timeValue = 5;
+  final double _thresholdValue = 0.5; // 속도가 충분히 빨라졌을 때의 값
   List<String> _jsonName = [
     'popheart.json',
-    'heart.json',
+    'fox.json',
     'hotpink.json',
     'lightpink.json',
     'hammer.json',
@@ -39,8 +40,8 @@ class _LottieTestState extends State<LottieTest> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    for(int i = 0; i < widget.answerState.length; i++) {
-      if(widget.answerState[i] == true) {
+    for (int i = 0; i < widget.answerState.length; i++) {
+      if (widget.answerState[i] == true) {
         _jsonValue = _jsonName[i];
       }
     }
@@ -53,12 +54,19 @@ class _LottieTestState extends State<LottieTest> with TickerProviderStateMixin {
               InkWell(
                 onTap: () {
                   setState(() {
-                    if (_timeValue > 0.1) {
+                    if (_timeValue > _thresholdValue) {
                       _timeValue -= 0.1;
+                      _lottieController.duration = Duration(milliseconds: (_timeValue * 1000).round());
+                      _lottieController.forward(from: _lottieController.value); // 현재 진행 상태부터 시작
+                      _lottieController.repeat();
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LottieResultScreen(),
+                        ),
+                      );
                     }
-                    _lottieController.duration = Duration(milliseconds: (_timeValue * 1000).round());
-                    _lottieController.forward(from: _lottieController.value); // 현재 진행 상태부터 시작
-                    _lottieController.repeat();
                   });
                 },
                 child: Lottie.asset(
