@@ -84,11 +84,11 @@ class _LottieTestState extends State<LottieTest> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            SizedBox(height: 170), // 게이지 바와 애니메이션 사이의 공간을 더 넓게 설정
+            SizedBox(height: 170), 
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center, // 중앙에 위치하게 조정
+                  mainAxisAlignment: MainAxisAlignment.center, 
                   children: <Widget>[
                     InkWell(
                       onTap: () {

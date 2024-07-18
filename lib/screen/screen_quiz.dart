@@ -34,7 +34,8 @@ class _QuizScreenState extends State<QuizScreen> {
             height: height * 0.5,
             child: Swiper(
               controller: _controller,
-              // scroll이 되지 않게 함으로써, 퀴즈를 풀지 않고 다음 퀴즈 페이지로 넘어가는 것을 차단함.
+              // scroll이 되지 않게 함으로써, 퀴즈를 풀지 않고 
+              //다음 퀴즈 페이지로 넘어가는 것을 차단함.
               physics: NeverScrollableScrollPhysics(), 
               loop: false,
               itemCount: widget.quizs.length,
