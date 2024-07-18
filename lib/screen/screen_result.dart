@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings, sort_child_properties_last
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings, sort_child_properties_last, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:dojeapp/model/model_quiz.dart';
@@ -26,17 +26,10 @@ class ResultScreen extends StatelessWidget {
       canPop: false,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('My Quiz App'),
-          backgroundColor: Colors.deepPurple,
           leading: Container(),
         ),
         body: Center(
           child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.deepPurple),
-              color: Colors.deepPurple,
-            ),
             width: width * 0.85,
             height: height * 0.5,
             child: Column(
@@ -47,7 +40,7 @@ class ResultScreen extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 46, 46, 89),
                   ),
                   width: width * 0.73,
                   height: height * 0.25,
@@ -62,14 +55,16 @@ class ResultScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: width * 0.055,
                             fontWeight: FontWeight.bold,
+                            color: Colors.white,
                           ),
                         ),
                       ),
                       Text(
-                        '당신의 점수는',
+                        '당신의 점수는..',
                         style: TextStyle(
                           fontSize: width * 0.048,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       Expanded(
@@ -80,7 +75,7 @@ class ResultScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: width * 0.21,
                           fontWeight: FontWeight.bold,
-                          color: Colors.red,
+                          color: Color.fromARGB(255, 254, 242, 134),
                         ),
                       ),
                     ],
