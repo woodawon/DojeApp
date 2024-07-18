@@ -83,6 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return PopScope(
       canPop: false,
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center, // 중앙에 컬럼 배치
           crossAxisAlignment: CrossAxisAlignment.center, // 중앙에 컬럼 배치
