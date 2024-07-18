@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api, use_key_in_widget_constructors, must_be_immutable, annotate_overrides
+// ignore_for_file: library_private_types_in_public_api, use_key_in_widget_constructors, must_be_immutable, annotate_overrides, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -27,8 +27,8 @@ class _CandWidgetState extends State<CandWidget> {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.deepPurple),
-        color: widget.answerState ? Colors.deepPurple : Colors.white,
+        border: Border.all(color: Color.fromARGB(255, 46, 46, 89)),
+        color: widget.answerState ? Color.fromARGB(255, 46, 46, 89) : Colors.white,
       ),
       child: InkWell(
         child: Text(

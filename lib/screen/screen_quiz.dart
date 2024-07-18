@@ -27,7 +27,7 @@ class _QuizScreenState extends State<QuizScreen> {
     double height = screenSize.height;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(255, 46, 46, 89),
         body: Center(
           child: Container(
             width: width * 0.85,
@@ -65,6 +65,7 @@ class _QuizScreenState extends State<QuizScreen> {
               style: TextStyle(
                 fontSize: width * 0.06,
                 fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 46, 46, 89),
               ),
             ),
           ),
@@ -78,6 +79,7 @@ class _QuizScreenState extends State<QuizScreen> {
               style: TextStyle(
                 fontSize: width * 0.048,
                 fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 46, 46, 89),
               ),
             ),
           ),
@@ -100,7 +102,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       ? Text('결과 보기')
                       : Text('다음문제'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple,
+                    backgroundColor: Color.fromARGB(255, 46, 46, 89),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: _answers[_currentIndex] == -1

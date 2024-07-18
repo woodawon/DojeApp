@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:dojeapp/model/model_quiz.dart';
 import 'package:dojeapp/screen/screen_home.dart';
+import 'package:lottie/lottie.dart';
 
 class ResultScreen extends StatelessWidget {
 
@@ -25,15 +26,19 @@ class ResultScreen extends StatelessWidget {
     return PopScope(
       canPop: false,
       child: Scaffold(
-        appBar: AppBar(
-          leading: Container(),
-        ),
+        backgroundColor: Colors.white,
         body: Center(
-          child: Container(
+          child: 
+          Container(
             width: width * 0.85,
-            height: height * 0.5,
+            height: height * 0.6,
             child: Column(
               children: <Widget>[
+                Lottie.asset(
+                  'assets/check.json',
+                  width: width * 0.3,
+                  repeat: false,
+                ),
                 Padding(
                   padding: EdgeInsets.only(bottom: width * 0.048),
                 ),
