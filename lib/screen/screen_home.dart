@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Text(
-              '안녕하세요. 반갑습니다. \n 도제에 오신 걸 진심으로 환영합니다.',
+              '안녕하세요. 반갑습니다. \n 도제반에 오신 걸 진심으로 환영합니다.',
               textAlign: TextAlign.center,
             ),
             Padding(
